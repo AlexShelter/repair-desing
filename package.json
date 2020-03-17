@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/AlexShelter/repair-desing#readme",
   "devDependencies": {
-    "gulp": "^4.0.2"
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-sass": "^4.0.2"
   }
 }
