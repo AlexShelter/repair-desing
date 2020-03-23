@@ -304,6 +304,20 @@ template {
 [hidden] {
   display: none; }
 
+@font-face {
+  font-family: 'Futura Book';
+  src: url("../fonts/futura/FuturaBookC.woff") format("woff"), url("../fonts/futura/FuturaBookC.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: wrap; }
+
+@font-face {
+  font-family: 'Futura Demi';
+  src: url("../fonts/futura/FuturaDemiC.woff") format("woff"), url("../fonts/futura/FuturaDemiC.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: wrap; }
+
 .container {
   max-width: 1256px;
   margin: auto; }
@@ -343,19 +357,33 @@ template {
 .contacts__phone {
   margin-right: 45px; }
 
-@font-face {
-  font-family: 'Futura Book';
-  src: url("../fonts/futura/FuturaBookC.woff") format("woff"), url("../fonts/futura/FuturaBookC.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: wrap; }
+.hero {
+  position: relative;
+  background: #131313 url("../img/hero-bg.jpg") no-repeat center/cover;
+  height: 100vh;
+  color: #ffffff; }
+  .hero__instagram {
+    left: 0;
+    top: 0;
+    max-width: 80px;
+    height: 100%;
+    position: absolute; }
+  .hero__title {
+    margin: 0; }
 
-@font-face {
-  font-family: 'Futura Demi';
-  src: url("../fonts/futura/FuturaDemiC.woff") format("woff"), url("../fonts/futura/FuturaDemiC.woff2") format("woff2");
-  font-weight: normal;
-  font-style: normal;
-  font-display: wrap; }
+.instagram {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #131313; }
+  .instagram__link {
+    color: #E3B873;
+    text-transform: uppercase;
+    text-decoration: none;
+    transform: rotate(90deg); }
+
+.title {
+  margin: 0; }
 
 body {
   font-family: 'Futura Book', sans-serif;
