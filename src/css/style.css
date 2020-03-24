@@ -319,7 +319,7 @@ template {
   font-display: wrap; }
 
 .button {
-  padding: 13px 20px;
+  padding: 11px 24px;
   border: none;
   border-radius: 2px;
   text-transform: uppercase;
@@ -387,6 +387,7 @@ body {
   align-items: center; }
 
 .logo {
+  font-size: 1.075rem;
   color: #E3B873;
   text-transform: uppercase; }
 
@@ -394,7 +395,7 @@ body {
   color: #ffffff;
   text-decoration: none;
   text-transform: uppercase;
-  margin-right: 2.85rem;
+  margin-right: 2.5rem;
   transition: color 0.5s; }
   .nav__item:hover {
     color: #E3B873; }
@@ -423,23 +424,29 @@ body {
     height: 100%;
     background-color: rgba(19, 19, 19, 0.7); }
   .hero__content {
-    max-width: 48.85rem;
+    max-width: 47.85rem;
     position: relative;
     margin-left: 4.28rem; }
+  .hero__title {
+    margin-bottom: 1rem; }
   .hero__text {
     font-size: 1.57rem;
-    line-height: 30px;
-    max-width: 500px; }
+    max-width: 500px;
+    line-height: 132%;
+    margin: 0;
+    margin-bottom: 3.4rem; }
   .hero__button {
-    margin-right: 20px; }
+    margin-right: 18px;
+    padding: 17px 29px; }
+    .hero__button--outline {
+      padding: 17px 42px;
+      letter-spacing: 0.3px; }
   .hero__instagram {
     left: 0;
     top: 0;
     max-width: 80px;
     height: 100%;
     position: absolute; }
-  .hero__title {
-    margin: 0; }
   .hero__scroll-down {
     display: flex;
     align-items: center;
@@ -452,7 +459,9 @@ body {
     background-color: #131313;
     text-transform: uppercase;
     color: #ffffff;
-    text-decoration: none; }
+    text-decoration: none;
+    font-family: Yeseva One;
+    font-size: 0.857rem; }
     .hero__scroll-down::after {
       content: ' ';
       background: url("../img/arrow-down.svg") no-repeat center;
@@ -460,7 +469,7 @@ body {
       height: 30px;
       border: 2px solid #E3B873;
       border-radius: 50%;
-      margin-left: 12px; }
+      margin-left: 16px; }
 
 .instagram {
   display: flex;
@@ -474,6 +483,7 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     transform: rotate(90deg);
+    font-size: 1.1rem;
     line-height: 0.8; }
     .instagram__link::after {
       content: ' ';
@@ -483,10 +493,10 @@ body {
       margin-left: 8px; }
 
 .title {
-  margin: 0;
   font-family: 'Yeseva One' , cursive;
   text-transform: uppercase;
-  font-size: 2.857rem; }
+  font-size: 2.857rem;
+  line-height: 1.4; }
   .title--primary {
     color: #E3B873; }
 
