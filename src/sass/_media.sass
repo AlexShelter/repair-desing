@@ -16,6 +16,9 @@
       margin-left: 0
 
 @media screen and ( max-width:570px  )
+  .container
+    width: auto
+    margin: 0 18px
   .contacts
     &__phone
       margin-right: 0
@@ -26,21 +29,33 @@
   .title
     font-size: 1.64rem
   .hero
+    height: 476px
+    justify-content: flex-start
+    padding-top: 142px
+    &__title
+      font-size: 1.9rem
+      margin: 0
+      padding-bottom: 16px
     &__scroll-down
       display: none
     &__content
-      max-width: 22.86rem
+      width: auto
     &__text
-      font-size: 1.29rem
-      margin-bottom: 2.28rem
-      &__button
+      font-size: 1.5rem
+      margin-bottom: 2.8rem
+      line-height: 135%
+    &__button
         display: block
-        min-width: 22.86rem
-        margin-bottom: 1.85rem
+        width: 100%
+        font-size: 1rem
+        font-weight: 700
+        letter-spacing: 0.7px
+        margin-bottom: 2.35rem
 @media screen and ( max-height: 520px )
   .hero
     &__scroll-down
       display: none
+    
   
   
 

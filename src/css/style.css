@@ -515,6 +515,9 @@ body {
     margin-left: 0; } }
 
 @media screen and (max-width: 570px) {
+  .container {
+    width: auto;
+    margin: 0 18px; }
   .contacts__phone {
     margin-right: 0;
     color: #ffffff;
@@ -523,17 +526,29 @@ body {
     display: none; }
   .title {
     font-size: 1.64rem; }
-  .hero__scroll-down {
-    display: none; }
-  .hero__content {
-    max-width: 22.86rem; }
-  .hero__text {
-    font-size: 1.29rem;
-    margin-bottom: 2.28rem; }
-    .hero__text__button {
+  .hero {
+    height: 476px;
+    justify-content: flex-start;
+    padding-top: 142px; }
+    .hero__title {
+      font-size: 1.9rem;
+      margin: 0;
+      padding-bottom: 16px; }
+    .hero__scroll-down {
+      display: none; }
+    .hero__content {
+      width: auto; }
+    .hero__text {
+      font-size: 1.5rem;
+      margin-bottom: 2.8rem;
+      line-height: 135%; }
+    .hero__button {
       display: block;
-      min-width: 22.86rem;
-      margin-bottom: 1.85rem; } }
+      width: 100%;
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.7px;
+      margin-bottom: 2.35rem; } }
 
 @media screen and (max-height: 520px) {
   .hero__scroll-down {
