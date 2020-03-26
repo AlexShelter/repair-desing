@@ -515,6 +515,8 @@ body {
     margin-left: 0; } }
 
 @media screen and (max-width: 570px) {
+  .header {
+    font-size: 1.04rem; }
   .container {
     width: auto;
     margin: 0 18px; }
@@ -527,13 +529,15 @@ body {
   .title {
     font-size: 1.64rem; }
   .hero {
-    height: 476px;
+    background: #131313 url("../img/hero-bg-mobile.jpg");
+    height: 537px;
     justify-content: flex-start;
-    padding-top: 142px; }
+    padding-top: 142px;
+    background-size: contain; }
     .hero__title {
       font-size: 1.9rem;
       margin: 0;
-      padding-bottom: 16px; }
+      padding-bottom: 15px; }
     .hero__scroll-down {
       display: none; }
     .hero__content {
