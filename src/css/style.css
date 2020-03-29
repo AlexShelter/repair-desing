@@ -357,20 +357,25 @@ body {
   font-family: 'Futura Book', sans-serif;
   font-size: 1rem; }
 
-.section-title {
-  text-align: center;
-  text-transform: uppercase;
-  font-family: 'Yeseva One', cursive; }
-  .section-title__image {
-    display: flex;
-    justify-content: center;
-    align-items: center; }
-    .section-title__image::after, .section-title__image::before {
-      content: '';
-      width: 32px;
-      height: 2px;
-      background-color: #E3B873;
-      margin: 0 10px; }
+img {
+  max-width: 100%; }
+
+.section {
+  padding: 60px 0; }
+  .section-title {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: 'Yeseva One', cursive; }
+    .section-title__image {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .section-title__image::after, .section-title__image::before {
+        content: '';
+        width: 32px;
+        height: 2px;
+        background-color: #E3B873;
+        margin: 0 10px; }
 
 .header {
   position: fixed;
@@ -500,6 +505,58 @@ body {
   .title--primary {
     color: #E3B873; }
 
+.types__section-title {
+  margin-bottom: 2.3rem;
+  margin-left: -1.9rem; }
+
+.section-title__heading {
+  letter-spacing: 0px;
+  font-size: 1.45rem;
+  font-weight: 500;
+  margin-bottom: 15px; }
+
+.row {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between; }
+
+.col {
+  flex-basis: 32.9%; }
+
+.card__text {
+  position: relative;
+  max-width: 23.6rem;
+  margin: 0 auto;
+  margin-top: -9.4rem;
+  margin-left: 1.9rem;
+  background-color: #fff;
+  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+  padding: 0.56rem 2.64rem; }
+
+.card__title {
+  font-family: 'Yeseva One' , cursive;
+  font-size: 1.29rem;
+  margin-bottom: 0.4rem; }
+
+.card__list {
+  padding: 0 0 0 1rem;
+  margin: 0;
+  font-size: 1.07rem;
+  line-height: 1.88rem;
+  color: #959595;
+  margin-bottom: 3.5rem; }
+
+.card__pricetag {
+  position: absolute;
+  left: 0.2rem;
+  bottom: -1.79rem;
+  font-size: 1.29rem;
+  font-family: 'Yeseva One' , cursive;
+  text-transform: uppercase;
+  background-color: #E3B873;
+  color: #ffffff;
+  padding: 1.214rem 2.885rem; }
+
 @media screen and (max-width: 1200px) {
   html {
     font-size: 12px; }
@@ -513,6 +570,36 @@ body {
     display: none; }
   .hero__content {
     margin-left: 0; } }
+
+@media screen and (max-width: 760px) {
+  .row {
+    flex-direction: column;
+    align-items: center; }
+  .types__card {
+    margin-bottom: 5.79rem; }
+  .types__section-title {
+    margin-bottom: 3.2rem;
+    margin-left: 0rem; }
+  .card__text {
+    margin-left: 0px;
+    margin-top: -11.6rem;
+    max-width: 22.4rem; }
+  .card__title {
+    letter-spacing: 0.4px;
+    font-size: 1.19rem;
+    margin-bottom: 0.8rem;
+    font-weight: 500; }
+  .card__pricetag {
+    left: 0.2rem;
+    bottom: -1.09rem;
+    font-size: 1.19rem;
+    padding: 1.014rem 2.785rem;
+    letter-spacing: 0.3px; }
+  .section-title__heading {
+    letter-spacing: 0px;
+    font-size: 1.85rem;
+    font-weight: 500;
+    margin-bottom: 19px; } }
 
 @media screen and (max-width: 570px) {
   .header {
