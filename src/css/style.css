@@ -666,6 +666,11 @@ img {
   padding-right: 5.5rem;
   padding-left: 2.6rem; }
 
+.button-up {
+  position: fixed;
+  right: 0;
+  bottom: 0; }
+
 .modal {
   opacity: 0;
   visibility: hidden;
