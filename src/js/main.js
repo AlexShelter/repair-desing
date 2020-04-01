@@ -30,7 +30,6 @@
 $(document).ready(function () {
   var modal = $('.modal'),
     modalBtn = $('[data-toggle="modal"]'),
-    modalVisible = $('.modal__dialog')
     closeBtn = $('.modal__close');
 
   modalBtn.on('click', function () {
@@ -48,17 +47,18 @@ $(document).ready(function () {
   });
 
   $(window).on('click',  function (e) {
-    e.preventDefault();
+    // e.preventDefault();
     let t = e.target.classList
     if(t[0] == 'modal') {
       modal.removeClass('modal--visible');
     }
-  });
+  }); 
 
 
 
   var top_show = 150; // В каком положении полосы прокрутки начинать показ кнопки "Наверх"
   var delay = 1000; // Задержка прокрутки
+  $('.button-up').fadeOut();
 
 
   $(window).scroll(function () { // При прокрутке попадаем в эту функцию
