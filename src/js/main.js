@@ -72,4 +72,28 @@ $(document).ready(function () {
       scrollTop: 0
     }, delay);
   });
+
+  var mySwiper = new Swiper ('.swiper-container', {
+    // Optional parameters
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination',
+      // type: 'bullet',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    }
+  })
+
+  var next = $('.swiper-button-next');
+  var prev = $('.swiper-button-prev');
+  var bullets = $('.swiper-pagination')
+
+  next.css('left', prev.width() + 10 + bullets.width() + 38)
+  bullets.css('left', prev.width() + 23)
 });
