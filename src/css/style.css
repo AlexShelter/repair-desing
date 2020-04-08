@@ -392,6 +392,9 @@ template {
   align-items: flex-start;
   justify-content: space-between; }
 
+.col-25 {
+  max-width: 30%; }
+
 .col-30 {
   flex-basis: 32.9%; }
 
@@ -404,6 +407,9 @@ template {
 .col-60 {
   max-width: 60%;
   padding-left: 4rem; }
+
+.col-75 {
+  max-width: 70%; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -807,74 +813,143 @@ img {
   color: #ffffff;
   padding: 1.214rem 2.885rem; }
 
-.design__section-title {
-  padding-left: 0.4rem;
-  margin-bottom: 1.7rem;
-  margin-left: -1.9rem; }
-
-.design .section-title__heading {
-  letter-spacing: 0px;
-  font-size: 1.45rem;
-  font-weight: 500;
-  margin-bottom: 15px; }
-
-.design .section-title__discription {
-  margin: 0 auto;
-  max-width: 53.82rem;
-  text-transform: none;
-  font-family: 'Futura Book';
-  font-weight: 500;
-  font-size: 1.36rem;
-  line-height: 1.93rem;
-  text-align: center;
-  padding: 1.2rem 0 1.8rem 0;
-  letter-spacing: 0.45px; }
+.design {
+  z-index: 10; }
+  .design__section-title {
+    padding-left: 0.4rem;
+    margin-bottom: 1.7rem;
+    margin-left: -1.9rem; }
+  .design .section-title__heading {
+    letter-spacing: 0px;
+    font-size: 1.45rem;
+    font-weight: 500;
+    margin-bottom: 15px; }
+  .design .section-title__discription {
+    margin: 0 auto;
+    max-width: 53.82rem;
+    text-transform: none;
+    font-family: 'Futura Book';
+    font-weight: 500;
+    font-size: 1.36rem;
+    line-height: 1.93rem;
+    text-align: center;
+    padding: 1.2rem 0 1.8rem 0;
+    letter-spacing: 0.45px; }
 
 .row {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between; }
+  justify-content: space-between;
+  z-index: 20; }
 
 .col {
   flex-basis: 32.9%; }
 
-.card__text {
-  position: relative;
-  max-width: 23.6rem;
-  margin: 0 auto;
-  margin-top: -9.4rem;
-  margin-left: 1.9rem;
-  background-color: #fff;
-  box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
-  padding: 0.56rem 2.64rem; }
+.card {
+  z-index: 20; }
+  .card img {
+    z-index: 20; }
+  .card__text {
+    position: relative;
+    max-width: 23.6rem;
+    margin: 0 auto;
+    margin-top: -9.4rem;
+    margin-left: 1.9rem;
+    background-color: #fff;
+    box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+    padding: 0.56rem 2.64rem;
+    z-index: 20; }
+  .card__title {
+    font-family: 'Yeseva One' , cursive;
+    font-size: 1.29rem;
+    margin-bottom: 0.4rem;
+    z-index: 20; }
+  .card__list {
+    padding: 0 0 0 1rem;
+    margin: 0;
+    font-size: 1.07rem;
+    line-height: 1.88rem;
+    color: #959595;
+    margin-bottom: 3.5rem;
+    z-index: 20; }
+  .card__pricetag {
+    position: absolute;
+    left: 0.2rem;
+    bottom: -1.79rem;
+    font-size: 1.29rem;
+    font-family: 'Yeseva One' , cursive;
+    text-transform: uppercase;
+    background-color: #E3B873;
+    color: #ffffff;
+    padding: 1.214rem 2.885rem;
+    z-index: 20; }
+  .card--design {
+    padding-right: 5.5rem;
+    padding-left: 2.6rem; }
 
-.card__title {
-  font-family: 'Yeseva One' , cursive;
-  font-size: 1.29rem;
-  margin-bottom: 0.4rem; }
-
-.card__list {
-  padding: 0 0 0 1rem;
-  margin: 0;
-  font-size: 1.07rem;
-  line-height: 1.88rem;
-  color: #959595;
-  margin-bottom: 3.5rem; }
-
-.card__pricetag {
-  position: absolute;
-  left: 0.2rem;
-  bottom: -1.79rem;
-  font-size: 1.29rem;
-  font-family: 'Yeseva One' , cursive;
-  text-transform: uppercase;
-  background-color: #E3B873;
+.six-steps {
+  background-color: #131313;
   color: #ffffff;
-  padding: 1.214rem 2.885rem; }
+  margin-top: -35.4rem;
+  padding-top: 29.2rem; }
+  .six-steps .swiper-pagination-step-number {
+    top: 0;
+    left: 0;
+    font-family: 'Yeseva One', cursive;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: uppercase;
+    letter-spacing: -2.8px; }
+  .six-steps .how-we-work {
+    text-transform: uppercase;
+    letter-spacing: 1.1px; }
+  .six-steps .section-title__heading {
+    letter-spacing: -2px;
+    font-size: 1.95rem;
+    font-weight: 300;
+    margin-bottom: 6.1rem;
+    text-align: left;
+    margin-top: -0.2rem;
+    letter-spacing: -0.5px; }
+  .six-steps .section-title__word {
+    display: flex;
+    align-items: center; }
+    .six-steps .section-title__word::after {
+      content: '';
+      width: 90px;
+      height: 1px;
+      background-color: #E3B873;
+      margin-left: 6.4rem; }
+  .six-steps .swiper-container-step {
+    background-color: #131313;
+    width: 100%;
+    display: block;
+    padding-top: 1.9rem; }
+  .six-steps .swiper-slide__heading-step {
+    text-transform: uppercase;
+    color: #E3B873;
+    width: 11.71rem;
+    line-height: 1.4rem;
+    font-size: 1.05rem;
+    letter-spacing: 0.1px;
+    font-weight: 100;
+    font-family: 'Yeseva One', cursive;
+    margin-bottom: -1.3px; }
+  .six-steps .swiper-slide__text-step {
+    line-height: 1.9rem;
+    width: 23.4rem;
+    letter-spacing: 0.5px; }
+  .six-steps .swiper-slide__text-step2 {
+    margin-top: -0.3rem;
+    letter-spacing: 0.4px;
+    width: 20.8rem;
+    line-height: 1.8rem;
+    margin-bottom: 6.4rem; }
 
-.card--design {
-  padding-right: 5.5rem;
-  padding-left: 2.6rem; }
+.swiper-container-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 0 9px; }
 
 .button-up {
   position: fixed;

@@ -1,4 +1,5 @@
 .design
+  z-index: 10
   &__section-title
     padding-left: 0.4rem
     margin-bottom: 1.7rem
@@ -24,9 +25,13 @@
   display: flex
   align-items: flex-start
   justify-content: space-between
+  z-index: 20
 .col
   flex-basis: 32.9%
 .card
+    z-index: 20
+    img
+      z-index: 20
     &__text
       position: relative
       max-width: 23.6rem
@@ -36,10 +41,12 @@
       background-color: #fff
       box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03)
       padding: 0.56rem 2.64rem
+      z-index: 20
     &__title
       font-family: 'Yeseva One' , cursive
       font-size: 1.29rem
       margin-bottom: 0.4rem
+      z-index: 20
     &__list
       padding: 0 0 0 1rem
       margin: 0
@@ -47,6 +54,7 @@
       line-height: 1.88rem
       color: $secondary
       margin-bottom: 3.5rem
+      z-index: 20
     &__pricetag
       position: absolute
       left: 0.2rem
@@ -57,6 +65,7 @@
       background-color: $primary
       color: $light
       padding: 1.214rem 2.885rem
+      z-index: 20
     &--design
       padding-right: 5.5rem
       padding-left: 2.6rem

@@ -46,13 +46,13 @@ $(document).ready(function () {
     }
   });
 
-  $(window).on('click',  function (e) {
+  $(window).on('click', function (e) {
     // e.preventDefault();
     let t = e.target.classList
-    if(t[0] == 'modal') {
+    if (t[0] == 'modal') {
       modal.removeClass('modal--visible');
     }
-  }); 
+  });
 
 
 
@@ -73,7 +73,7 @@ $(document).ready(function () {
     }, delay);
   });
 
-  var mySwiper = new Swiper ('.swiper-container', {
+  var mySwiper = new Swiper('.swiper-container', {
     // Optional parameters
     loop: true,
 
@@ -92,8 +92,41 @@ $(document).ready(function () {
 
   var next = $('.swiper-button-next');
   var prev = $('.swiper-button-prev');
-  var bullets = $('.swiper-pagination')
+  var bullets = $('.swiper-pagination');
 
-  next.css('left', prev.width() + 10 + bullets.width() + 38)
-  bullets.css('left', prev.width() + 23)
+  next.css('left', prev.width() + 10 + bullets.width() + 38);
+  bullets.css('left', prev.width() + 23);
+
+
+  var stepSwiper =  new Swiper ('.swiper-container-step', {
+    // Optional parameters
+    loop: true,
+
+    // If we need pagination
+    pagination: {
+      el: '.swiper-pagination-step',
+      type: 'fraction',
+      type: 'bullets',
+    },
+
+    pagination: {
+      el: '.swiper-pagination-step-number',
+      type: 'fraction',
+    },
+
+    // Navigation arrows
+    navigation: {
+      nextEl: '.swiper-button-next-step',
+      prevEl: '.swiper-button-prev-step',
+    },
+  })
+
+  var nextStep = $('.swiper-button-next-step');
+  var prevStep = $('.swiper-button-prev-step');
+  var paginationStep = $('.swiper-pagination-step');
+  var fractionStep = $('.swiper-pagination-fraction')
+
+  nextStep.css('left', prevStep.width() + 10 + paginationStep.width() + 32);
+  paginationStep.css('left', prevStep.width() + 21 );
+  fractionStep.css('left', 0);
 });
