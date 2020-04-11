@@ -1,0 +1,100 @@
+.footer
+  background: $dark url('../img/footer-bg.jpg') no-repeat center / cover
+  padding-top: 4rem
+  &__wrap
+    background-color: $black
+    max-width: 63.07rem
+    margin: auto
+    padding: 2.5rem 
+    margin-top: -20rem
+    margin-bottom: 3.714rem
+  &__title
+    text-transform: uppercase
+    font-family: 'Yeseva One' , cursive
+    font-style: normal
+    font-weight: normal
+    font-size: 1.428rem
+    text-align: center
+    margin-bottom: 3.214rem
+    margin-top: 0
+  &__form
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    max-width: 37.142rem
+    margin: auto
+  &__input-group
+    display: flex
+    flex-direction: column
+    flex-basis: 45%
+    margin-bottom: 3.2rem
+  &__input
+    padding-top: 0.3rem
+    &::placeholder
+      color: $light
+    &--full-width
+      flex-basis: 100%
+      margin-bottom: 2rem
+  &__policy
+    flex-basis: 100%
+    margin-bottom: 3.6rem
+    .policy
+      &__label
+        transform: translateX(-12px)
+        letter-spacing: -0.3px
+        font-size: 1.2rem
+  &__button
+    margin: auto
+    padding: 1.2rem 4.285rem
+    font-size: 1.13rem
+  &__menu
+    background-color: $dark
+    padding: 4.285rem 0
+@media screen and ( max-width:760px  )
+  .footer
+    padding: 0
+    background-image: none
+    &__menu
+      display: none
+    &__title
+      font-size: 1.65rem
+      text-align: center
+      margin-bottom: 4.45rem
+    &__wrap
+      padding: 0
+      margin-bottom: 0
+      margin-top: 0
+      background-color: $dark
+    &__form
+      justify-content: center
+    &__input-group
+      flex-basis: 100%
+      margin-bottom: 5.1rem
+    &__input
+      &--full-width
+        margin-bottom: 0.3rem
+    .form
+      &__label
+        font-size: 1.2rem
+      &__input
+        font-size: 1.5rem
+    &__policy
+      .policy
+        &__label
+          justify-content: flex-start
+          transform: translateX(0px)
+          font-size: 1.4rem
+          margin-bottom: 2.2rem
+    &__button
+      max-width: 100%
+      padding: 1.5rem 10.65rem
+      font-size: 1.2rem
+      letter-spacing: 1.1px
+@media screen and ( max-width:340px  )
+  .footer
+    &__button
+      padding: 1.5rem 5.65rem
+    
+      
+
+  

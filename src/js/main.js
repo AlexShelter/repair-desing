@@ -99,6 +99,100 @@ $(document).ready(function () {
 
 
   new WOW().init();
+  
+  // Валидация формы
+
+  $('.footer__form').validate({
+    errorClass:"invalid",
+    errorElement: "div",
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15,
+      },
+      // compound rule
+
+      userPhone: {
+        required: true
+      },
+    },
+    
+    messages: {
+      userName: {
+        required: "Заполните поле.",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длиннее 15 букв",
+      },
+      userPhone:"Заполните поле.",
+    }
+  });
+  $('.control__form').validate({
+    errorClass:"invalid",
+    errorElement: "div",
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15,
+      },
+      // compound rule
+
+      userPhone: {
+        required: true
+      },
+    },
+    
+    messages: {
+      userName: {
+        required: "Заполните поле.",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длиннее 15 букв",
+      },
+      userPhone:"Заполните поле.",
+    }
+  });
+
+  $('.modal__form').validate({
+    errorClass:"invalid",
+    errorElement: "div",
+    rules: {
+      // simple rule, converted to {required:true}
+      userName: {
+        required: true,
+        minlength: 2,
+        maxlength: 15,
+      },
+      // compound rule
+
+      userPhone: {
+        required: true
+      },
+
+      userEmail: {
+        required: true,
+        email: true
+      }       
+    },
+    
+    messages: {
+      userName: {
+        required: "Заполните поле.",
+        minlength: "Имя не короче двух букв",
+        maxlength: "Имя не длиннее 15 букв",
+      },
+      userPhone:"Заполните поле.",
+      userEmail: {
+        required: "Заполните поле.",
+        email: "Введите корректный email."
+      }
+    }
+  });
+
+  // маска для номера телефона
+  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7(___) ___-__-__"});
 
 
   // var stepSwiper =  new Swiper ('.swiper-container-step', {
