@@ -29,8 +29,8 @@
 
 $(document).ready(function () {
   var modal = $('.modal'),
-      modalBtn = $('[data-toggle="modal"]'),
-      closeBtn = $('.modal__close');
+    modalBtn = $('[data-toggle="modal"]'),
+    closeBtn = $('.modal__close');
 
   modalBtn.on('click', function () {
     modal.toggleClass('modal--visible');
@@ -99,12 +99,19 @@ $(document).ready(function () {
 
 
   new WOW().init();
-  
+
   // Валидация формы
 
   $('.footer__form').validate({
-    errorClass:"invalid",
+    errorClass: "invalid",
     errorElement: "div",
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+        return element.next('label').append(error);
+      }
+
+      error.insertAfter($(element));
+    },
     rules: {
       // simple rule, converted to {required:true}
       userName: {
@@ -115,22 +122,35 @@ $(document).ready(function () {
       // compound rule
 
       userPhone: {
-        required: true
+        required: true,
       },
+
+      policyCheckbox: {
+        required: true,
+      }
+
     },
-    
+
     messages: {
       userName: {
         required: "Заполните поле.",
         minlength: "Имя не короче двух букв",
         maxlength: "Имя не длиннее 15 букв",
       },
-      userPhone:"Заполните поле.",
+      userPhone: "Заполните поле.",
+      policyCheckbox: "Подтвердите согласие"
     }
   });
   $('.control__form').validate({
-    errorClass:"invalid",
+    errorClass: "invalid",
     errorElement: "div",
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+        return element.next('label').append(error);
+      }
+
+      error.insertAfter($(element));
+    },
     rules: {
       // simple rule, converted to {required:true}
       userName: {
@@ -143,21 +163,33 @@ $(document).ready(function () {
       userPhone: {
         required: true
       },
+      policyCheckbox: {
+        required: true,
+      }
     },
-    
+
     messages: {
       userName: {
         required: "Заполните поле.",
         minlength: "Имя не короче двух букв",
         maxlength: "Имя не длиннее 15 букв",
       },
-      userPhone:"Заполните поле.",
+      userPhone: "Заполните поле.",
+      policyCheckbox: "Подтвердите согласие"
     }
   });
 
   $('.modal__form').validate({
-    errorClass:"invalid",
+    errorClass: "invalid",
     errorElement: "div",
+    errorPlacement: function (error, element) {
+      if (element.attr("type") == "checkbox") {
+        return element.next('label').append(error);
+      }
+
+      error.insertAfter($(element));
+    },
+
     rules: {
       // simple rule, converted to {required:true}
       userName: {
@@ -174,25 +206,34 @@ $(document).ready(function () {
       userEmail: {
         required: true,
         email: true
-      }       
+      },
+
+      policyCheckbox: {
+        required: true,
+      }
+
     },
-    
+
     messages: {
       userName: {
         required: "Заполните поле.",
         minlength: "Имя не короче двух букв",
         maxlength: "Имя не длиннее 15 букв",
       },
-      userPhone:"Заполните поле.",
+      userPhone: "Заполните поле.",
       userEmail: {
         required: "Заполните поле.",
         email: "Введите корректный email."
-      }
+      },
+      policyCheckbox: "Подтвердите согласие"
     }
   });
 
   // маска для номера телефона
-  $('[type=tel]').mask('+7(000) 000-00-00', {placeholder: "+7(___) ___-__-__"});
+  $('[type=tel]').mask('+7(000) 000-00-00', {
+    placeholder: "+7(___) ___-__-__"
+  });
+
 
 
   // var stepSwiper =  new Swiper ('.swiper-container-step', {
@@ -223,7 +264,7 @@ $(document).ready(function () {
   // var paginationStep = $('.swiper-pagination-step');
   // var fractionStep = $('.swiper-pagination-fraction')
 
-  
+
 
   // nextStep.css('left', prevStep.width() + 10 + paginationStep.width() + 32);
   // paginationStep.css('left', prevStep.width() + 21 );

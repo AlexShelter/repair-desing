@@ -32,6 +32,7 @@
     &::placeholder
       color: $light
 .policy
+  position: relative
   &__checkbox
     opacity: 0
     visibility: hidden
@@ -39,7 +40,8 @@
       .policy__label
         &::before
           background: $primary url('../img/check.svg') no-repeat center / 0.8rem
-
+      .policy__label-2
+        background: none
     
   &__label
     display: flex
@@ -56,8 +58,25 @@
       justify-content: center
 div
   &.invalid
+    position: absolute
     color: tomato
+    top: 4rem
+    outline: none
+    border: none
 input
   &.invalid
     border-bottom: 1px solid tomato
-
+  &:focus
+    outline: none
+.input
+  &-group
+    position: relative
+.control, .footer
+  &__policy
+    .invalid
+      width: 100%
+      text-align: center
+.footer
+  &__policy
+    .invalid
+      margin-top: -25px
