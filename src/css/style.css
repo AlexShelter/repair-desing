@@ -404,7 +404,7 @@ input:focus {
   text-align: center; }
 
 .footer__policy .invalid {
-  margin-top: -25px; }
+  transform: translateY(-22px); }
 
 .container {
   width: 85%;
