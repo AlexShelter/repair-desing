@@ -1134,9 +1134,11 @@ img {
     margin-bottom: 3rem;
     max-width: 5.07rem; }
   .footer__map .map__image-map {
+    min-height: 465px;
     margin-bottom: 4.9rem; }
     .footer__map .map__image-map--mobile {
-      display: none; }
+      display: none;
+      min-height: 255px; }
 
 @media screen and (max-width: 760px) {
   .footer {
@@ -1206,8 +1208,10 @@ img {
     .footer__map .map__image-map--mobile {
       display: block;
       order: -1;
-      padding-top: 3.7rem;
-      padding-bottom: 0.1rem; } }
+      padding-top: 0rem;
+      padding-bottom: 0rem;
+      margin-top: 3.7rem;
+      margin-bottom: 3.3rem; } }
 
 @media screen and (max-width: 340px) {
   .footer__button {

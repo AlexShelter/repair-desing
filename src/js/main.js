@@ -235,6 +235,75 @@ $(document).ready(function () {
   });
 
 
+  //            API Yandex Map
+  // Функция ymaps.ready() будет вызвана, когда
+    // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+    ymaps.ready(function () {
+      var myMap = new ymaps.Map('map', {
+              center: [47.244729, 39.723187],
+              zoom: 9
+          }, {
+              searchControlProvider: 'yandex#search'
+          }),
+  
+          // Создаём макет содержимого.
+          MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+              '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+          ),
+  
+          myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+              hintContent: 'Наш офис',
+              balloonContent: 'Bход со двора'
+          }, {
+              // Опции.
+              // Необходимо указать данный тип макета.
+              iconLayout: 'default#image',
+              // Своё изображение иконки метки.
+              iconImageHref: 'img/canada.png',
+              // Размеры метки.
+              iconImageSize: [32, 32],
+              // Смещение левого верхнего угла иконки относительно
+              // её "ножки" (точки привязки).
+              iconImageOffset: [-5, -38]
+          });
+  
+      myMap.geoObjects
+          .add(myPlacemark)
+  });
+
+  ymaps.ready(function () {
+    var myMap2 = new ymaps.Map('mapMobile', {
+            center: [47.244729, 39.723187],
+            zoom: 17
+        }, {
+            searchControlProvider: 'yandex#search'
+        }),
+
+        // Создаём макет содержимого.
+        MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+            '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+        ),
+
+        myPlacemark = new ymaps.Placemark(myMap2.getCenter(), {
+            hintContent: 'Наш офис',
+            balloonContent: 'Bход со двора'
+        }, {
+            // Опции.
+            // Необходимо указать данный тип макета.
+            iconLayout: 'default#image',
+            // Своё изображение иконки метки.
+            iconImageHref: 'img/canada.png',
+            // Размеры метки.
+            iconImageSize: [32, 32],
+            // Смещение левого верхнего угла иконки относительно
+            // её "ножки" (точки привязки).
+            iconImageOffset: [-5, -38]
+        });
+
+    myMap2.geoObjects
+        .add(myPlacemark)
+  });
+
 
   // var stepSwiper =  new Swiper ('.swiper-container-step', {
   //   // Optional parameters
