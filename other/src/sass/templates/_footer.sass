@@ -1,0 +1,190 @@
+.footer
+  background: $dark url('../img/footer-bg.jpg') no-repeat center / cover
+  padding-top: 4rem
+  &__wrap
+    background-color: $black
+    max-width: 63.07rem
+    margin: auto
+    padding: 2.5rem 
+    margin-top: -20rem
+    margin-bottom: 1.414rem
+  &__title
+    text-transform: uppercase
+    font-family: 'Yeseva One' , cursive
+    font-style: normal
+    font-weight: normal
+    font-size: 1.428rem
+    text-align: center
+    margin-bottom: 3.214rem
+    margin-top: 0
+  &__form
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    max-width: 37.142rem
+    margin: auto
+  &__input-group
+    display: flex
+    flex-direction: column
+    flex-basis: 45%
+    margin-bottom: 3.2rem
+  &__input
+    padding-top: 0.3rem
+    &::placeholder
+      color: $light
+    &--full-width
+      flex-basis: 100%
+      margin-bottom: 2rem
+  &__policy
+    flex-basis: 100%
+    margin-bottom: 3.6rem
+    .policy
+      &__label
+        transform: translateX(-12px)
+        letter-spacing: -0.3px
+        font-size: 1.2rem
+  &__button
+    margin: auto
+    padding: 1.2rem 4.285rem
+    font-size: 1.13rem
+  &__menu
+    background-color: $dark
+    padding: 3.3rem 0
+  &__map
+    .map
+      &-wrap
+        max-width: 925px
+        margin: auto
+        transform: translateX(-0.9rem) 
+      &-title
+          padding-top: 2rem
+          &__social
+            img
+              max-width: 28px
+      &-title
+        &__header
+          margin: auto
+          margin-bottom: 1.6rem
+          max-width: 34rem
+          font-family: 'Yeseva One' , cursive
+          color: $primary
+          font-style: normal
+          font-weight: normal
+          font-size: 20px
+          line-height: 28px
+          text-align: center
+          text-transform: uppercase
+        &__social
+          display: flex
+          justify-content: space-between
+          margin: auto
+          margin-bottom: 3rem
+          max-width: 5.07rem
+      &__image
+        &-map
+          min-height: 465px
+          margin-bottom: 4.9rem
+          &--mobile
+            display: none
+            min-height: 255px
+@media screen and ( max-width:760px  )
+  .footer
+    padding: 0
+    background-image: none
+    &__map
+      .map
+        &-wrap
+          transform: translateX(0)
+        &-title
+          padding-top: 2rem
+          &__social
+            img
+              max-width: 39px
+        &__image-map
+          padding-bottom: 2.714rem
+          margin-bottom: 0
+    &__menu
+      display: none
+    &__title
+      font-size: 1.65rem
+      text-align: center
+      margin-bottom: 4.45rem
+    &__wrap
+      padding: 0
+      margin-bottom: 0
+      margin-top: 0
+      background-color: $dark
+    &__form
+      justify-content: center
+    &__input-group
+      flex-basis: 100%
+      margin-bottom: 5.1rem
+    &__input
+      &--full-width
+        margin-bottom: 0.3rem
+    .form
+      &__label
+        font-size: 1.2rem
+      &__input
+        font-size: 1.5rem
+    &__policy
+      .policy
+        &__label
+          justify-content: flex-start
+          transform: translateX(0px)
+          font-size: 1.4rem
+          margin-bottom: 2.2rem
+    &__button
+      max-width: 100%
+      padding: 1.5rem 10.65rem
+      font-size: 1.2rem
+      letter-spacing: 1.1px
+
+
+@media screen and ( max-width:375px  )
+  .footer
+    &__map
+      .map
+        &-title
+          padding-top: 0
+          &__header
+            font-size: 1.5rem
+            line-height: 2.2rem
+            letter-spacing: 0px
+            margin-bottom: 1.7rem
+          &__social
+            max-width: 99px
+            img
+              width: 39px
+              height: 39px
+        &-wrap
+          display: flex
+          flex-direction: column
+        &__image-map
+          display: none
+          margin-bottom: 3rem
+          &--mobile
+            display: block
+            order: -1
+            padding-top: 0rem
+            padding-bottom: 0rem
+            margin-top: 3.7rem
+            margin-bottom: 3.3rem
+            // & *
+            //   height: 100%
+      
+      
+@media screen and ( max-width:340px  )
+  .footer
+    &__button
+      padding: 1.5rem 5.65rem
+    &__map
+      // display: none
+    &__map
+      .map
+        &-title
+          padding-top: 2rem
+        &__image-map
+          padding-bottom: 2.714rem
+
+  

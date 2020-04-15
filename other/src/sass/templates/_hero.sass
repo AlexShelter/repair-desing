@@ -1,0 +1,107 @@
+.hero
+  display: flex
+  flex-direction: column
+  justify-content: center
+  padding-top: 100px
+  position: relative
+  background: $dark url('../img/hero-bg.jpg') no-repeat center / cover
+  height: 100vh
+  color: $light
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background-color: rgba($dark, 0.7)
+  &::after
+    content: ''
+    position: absolute
+    bottom: 0
+    left: 0
+    right: 0
+    width: 100%
+    height: 3.46rem
+    background-color: $dark
+  &__content
+    max-width: 47.85rem
+    position: relative
+    margin-left: 4.28rem
+  &__title
+    margin-bottom: 1rem
+  &__text
+    font-size: 1.57rem
+    max-width: 500px
+    line-height: 132%
+    margin: 0
+    margin-bottom: 3.4rem
+
+  &__button
+    margin-right: 18px
+    padding: 17px 29px
+    &--outline
+      padding: 17px 42px
+      letter-spacing: 0.3px
+  &__instagram
+    left: 0
+    top: 0
+    max-width: 80px
+    height: 100%
+    position: absolute
+  &__scroll-down
+    z-index: 3
+    display: flex
+    align-items: center
+    justify-content: center
+    position: absolute
+    left: 0
+    bottom: 0
+    min-width: 17.6rem
+    min-height: 6.92rem
+    background-color: $dark
+    text-transform: uppercase
+    color: $light
+    text-decoration: none
+    font-family: Yeseva One
+    font-size: 0.857rem
+    &::after
+      content: ' '
+      background: url('../img/arrow-down.svg') no-repeat center
+      width: 30px
+      height: 30px
+      border: 2px solid $primary
+      border-radius: 50%
+      margin-left: 16px
+
+.instagram
+  display: flex
+  justify-content: center
+  align-items: center
+  background-color: $dark
+  &__link
+    display: flex
+    align-items: center
+    color: $primary
+    text-transform: uppercase 
+    text-decoration: none
+    transform: rotate(90deg)
+    font-size: 1.1rem
+    line-height: 0.8
+    &::after
+      content: ' '
+      width: 50px
+      height: 1px
+      background-color: $primary
+      margin-left: 8px
+
+.title
+  // margin: 0
+  font-family: 'Yeseva One' , cursive
+  text-transform: uppercase
+  font-size: 2.857rem
+  line-height: 1.4
+  &--primary
+    color: $primary
+
+
