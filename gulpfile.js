@@ -1,9 +1,13 @@
-const {src, dest, watch} = require('gulp');
+const {src, dest, watch, series} = require('gulp');
 const browserSync = require('browser-sync').create();
 const cssmin = require('gulp-cssmin');
 const rename = require('gulp-rename');
 const sass = require('gulp-sass');
 const autoprefixer = require('gulp-autoprefixer');
+const htmlmin = require('gulp-htmlmin');
+const tinypng = require('gulp-tinypng-compress');
+const cleanCSS = require('gulp-clean-css');
+const minify = require('gulp-minify');
 
 
 // Static server
@@ -38,6 +42,73 @@ function minCss(done) {
       done();
 };
 
+function minHTML(done)  {
+  src('./src/**/*.html')
+    .pipe(htmlmin({ collapseWhitespace: true }))
+    .pipe(dest('./dist'));
+    done();
+};
+
+function minifyCss(done) {
+  src('./src/css/**/*.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(dest('./dist/css'));
+    done();
+};
+
+
+function compressJS(done) {
+  src('./src/**/*.js')
+    .pipe(minify({
+      exclude: ['tasks'],
+      ignoreFiles: ['.combo.js', '*.min.js']
+  }))
+    .pipe(dest('./dist'))
+    done();
+};
+
+function tinyImg(done) {
+  src('./src/**/*.{png,jpg,jpeg}')
+      .pipe(tinypng({
+          key: 'w0KzdvkLx33cs60XKbqPhXWbNqRhK1DR',
+          sigFile: 'images/.tinypng-sigs',
+          log: true
+      }))
+      .pipe(dest('./dist'));
+  src('./src/**/*.svg')
+      .pipe(dest('dist/'));
+  done();
+};
+
+function svg(done) {
+  src('./src/**/*.svg')
+      .pipe(dest('dist'));
+  done();
+}
+
+function php(done) {
+  src(['./src/**.php', ])
+     .pipe(dest('dist/'));
+  src(['./src/phpmailer/**/**'])
+     .pipe(dest('dist/phpmailer'));
+  done();
+}
+
+function fonts(done) {
+  src('./src/fonts/**/**')
+     .pipe(dest('dist/fonts'));
+  done();
+}
+
 exports.serve = bs;
 exports.minCss = minCss;
+exports.minifyHTML = minHTML;
+exports.minifyCss = minifyCss;
+exports.minJS = compressJS;
+exports.minImg = tinyImg;
+exports.fonts = fonts;
+exports.php = php;
+exports.build = series(minHTML, minifyCss, compressJS, tinyImg, php, fonts);
+exports.svg = svg;
+
 

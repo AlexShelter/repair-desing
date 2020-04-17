@@ -162,7 +162,23 @@
   .hero
     &__scroll-down
       display: none
-    
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+  .hero
+    &__content
+      height: 600px
+      margin: 0
+    &__scroll-down
+      padding-top: 2rem
+  .video__play
+    position: relative
+    margin: 142px auto
+
+
+
+
+
+
 
   
   

@@ -1,6 +1,45 @@
 .footer
   background: $dark url('../img/footer-bg.jpg') no-repeat center / cover
   padding-top: 4rem
+  .ymap-container 
+    position: relative
+    margin: 3em 0 2em 0
+    overflow: hidden
+    cursor: pointer
+    background: url('../img/map-home.jpg') no-repeat center/ cover
+    box-shadow: 0 0 2em  0 rgba(0,0,0,.2)
+    max-height: 465px
+    margin-bottom: 4.9rem
+  .loader
+    position: absolute
+    z-index: 15
+    top: -100%
+    left: 0
+    box-sizing: border-box
+    width: 100%
+    height: 100%
+    overflow: hidden
+    color: #000000
+    transition: opacity .7s ease
+    opacity: 0
+    background-color: rgba(0,0,0,.55)
+  .loader:after,
+  .loader:before 
+    box-sizing: border-box
+  .loader.is-active 
+    top: 0
+    opacity: 1
+  .loader-default:after 
+    position: absolute
+    top: calc(50% - 24px)
+    left: calc(50% - 24px)
+    width: 48px
+    height: 48px
+    content: ''
+    animation: rotation 1s linear infinite
+    border: solid 8px #ffffff
+    border-left-color: transparent
+    border-radius: 50%
   &__wrap
     background-color: $black
     max-width: 63.07rem
@@ -87,11 +126,13 @@
           &--mobile
             display: none
             min-height: 255px
+            
 @media screen and ( max-width:760px  )
   .footer
     padding: 0
     background-image: none
     &__map
+      padding-bottom: 3.3rem
       .map
         &-wrap
           transform: translateX(0)
@@ -144,6 +185,7 @@
 @media screen and ( max-width:375px  )
   .footer
     &__map
+      padding-top: 0.7rem
       .map
         &-title
           padding-top: 0
@@ -161,17 +203,20 @@
           display: flex
           flex-direction: column
         &__image-map
-          display: none
           margin-bottom: 3rem
-          &--mobile
-            display: block
-            order: -1
-            padding-top: 0rem
-            padding-bottom: 0rem
-            margin-top: 3.7rem
-            margin-bottom: 3.3rem
-            // & *
-            //   height: 100%
+          height: auto
+          min-height: 255px
+          padding: 0
+    .ymap-container
+      order: -1
+      padding-top: 0rem
+      padding-bottom: 0rem
+      // margin-top: 3.7rem
+      margin-bottom: 3.3rem
+      padding: 0
+      max-height: 255px
+              // & *
+              //   height: 100%
       
       
 @media screen and ( max-width:340px  )
